@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones Matemáticas</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body style="background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);">
+    <audio src="Sonidos/OMG.mp3" autoplay></audio>
+    <header class="cabe-op">
+        <h1>Operaciones Matemáticas</h1>
+    </header>
+    <div class="cuer-op">
+        <input type="button" id="sum" onclick="Sumi()" value="SUMA" class="boto">
+        <input type="button" id="res" onclick="Resti()" value="RESTA" class="boto">
+        <input type="button" id="mul" onclick="Multi()" value="MULTI" class="boto">
+        <input type="button" id="div" onclick="Divi()" value="DIVISIÓN" class="boto">
+    </div>
+    <center>
+        <div class="imag-op">
+            <img src="Imágenes/suma.jpg" alt="" id="su" hidden>
+            <img src="Imágenes/resta.png" alt="" id="re" hidden>
+            <img src="Imágenes/multiplicacion.png" alt="" id="mu" hidden>
+            <img src="Imágenes/division.jpg" alt="" id="di" hidden>
+        </div>
+    </center>
+    <center>
+        <div class="cont-op">
+            <h1>Inserte un número</h1><br><br>
+            <input type="number" id="n1" class="textii"><br><br>
+            <h1>Inserte otro número</h1><br><br>
+            <input type="number" id="n2" class="textii"><br><br>
+            <h1>Resultado</h1><br><br>
+            <input type="text" id="respuest" class="textii"><br><br>
+        </div>
+    </center>
+    <script>
+        function Sumi(){
+            document.getElementById('su').style.display = "block";
+            var num1 = document.getElementById('n1').value;
+            var num2 = document.getElementById('n2').value;
+            var num1_convert = parseInt(num1);
+            var num2_convert = parseInt(num2);
+            var resultado = num1_convert + num2_convert;
+            document.getElementById('respuest').value = resultado;
+        }
+        function Resti(){
+            document.getElementById('re').style.display = "block";
+            document.getElementById('su').style.display = "none";
+            var num1 = document.getElementById('n1').value;
+            var num2 = document.getElementById('n2').value;
+            var num1_convert = parseInt(num1);
+            var num2_convert = parseInt(num2);
+            var resultado = num1_convert - num2_convert;
+            document.getElementById('respuest').value = resultado;
+        }
+        function Multi(){
+            document.getElementById('mu').style.display = "block";
+            document.getElementById('re').style.display = "none";
+            var num1 = document.getElementById('n1').value;
+            var num2 = document.getElementById('n2').value;
+            var num1_convert = parseInt(num1);
+            var num2_convert = parseInt(num2);
+            var resultado = num1_convert * num2_convert;
+            document.getElementById('respuest').value = resultado;
+        }
+        function Divi(){
+            document.getElementById('di').style.display = "block";
+            document.getElementById('mu').style.display = "none";
+            var num1 = document.getElementById('n1').value;
+            var num2 = document.getElementById('n2').value;
+            var num1_convert = parseInt(num1);
+            var num2_convert = parseInt(num2);
+            var resultado = num1_convert / num2_convert;
+            document.getElementById('respuest').value = resultado;
+        }
+    </script>
+    <div class="vol-5">
+        <a href="Programas-Matemáticos.html"><b>Regresar</b></a>
+    </div>
+</body>
+</html>

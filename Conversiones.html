@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversiones de Unidades</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+    <audio src="Sonidos/F-OFF.mp3" autoplay></audio>
+    <header class="cabe-conv">
+        <h1>Conversiones de Unidades (Grados a Radianes)</h1><br>
+        <img src="Imágenes/grados-a-radianes.jpg" alt="" class="portada-conv">
+    </header>
+    <center>
+        <div class="cont-conv">
+            <h1>Inserte un número</h1><br><br>
+            <input type="number" id="n1" class="texti"><br><br>
+            <input type="button" value="CALCULAR" class="boti" onclick="Calcu()"><br><br>
+            <h1>Resultado</h1><br><br>
+            <input type="text" id="respuestita" class="texti"><br><br>
+        </div>
+    </center>
+    <script>
+        function Calcu(){
+            var num1 = document.getElementById('n1').value;
+            var n1_convert = parseInt(num1);
+            var respuesta = n1_convert * 3.14 /180;
+            document.getElementById('respuestita').value = respuesta;
+        }
+    </script>
+    <div class="vol-6">
+        <a href="Programas-Matemáticos.html"><b>Regresar</b></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversión de Monedas</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body style="background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);">
+    <audio src="Sonidos/VIP.mp3" autoplay></audio>
+    <header class="cabe-mone">
+        <h1>Conversión de Monedas</h1>
+    </header>
+    <div class="cuer-mone">
+        <input type="button" id="dol" onclick="DOLA()" value="Dólar" class="bot">
+        <input type="button" id="mex" onclick="MXN()" value="Peso Mexicano" class="bot">
+    </div>
+    <center>
+        <div class="imag-mon">
+            <img src="Imágenes/mx-dolar.png" alt="" id="mexi" hidden>
+            <img src="Imágenes/dol-mx.jpg" alt="" id="do" hidden>
+        </div>
+    </center>
+    <center>
+        <div class="cont-mon">
+            <h1>Inserte la cantidad</h1><br><br>
+            <input type="number" id="pes1" class="textoo"><br><br>
+            <h1>Resultado</h1><br><br>
+            <input type="text" id="resp" class="textoo"><br><br>
+        </div>
+    </center>
+    <script>
+        function DOLA(){
+            document.getElementById('do').style.display = "block";
+            var cant1 = document.getElementById('pes1').value;
+            var cant1_convert = parseInt(cant1);
+            var resultado = cant1_convert * 18.31;
+            document.getElementById('resp').value = resultado;
+        }
+        function MXN()
+        {
+            document.getElementById('mexi').style.display = "block";
+            document.getElementById('do').style.display = "none";
+            var cant1 = document.getElementById('pes1').value;
+            var cant1_convert = parseInt(cant1);
+            var resultado = cant1_convert * 0.055;
+            document.getElementById('resp').value = resultado;
+        }
+    </script>
+    <div class="vol-8">
+        <a href="Programas-Matemáticos.html"><b>Regresar</b></a>
+    </div>
+</body>
+</html>

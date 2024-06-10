@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body style="background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);">
+    <audio src="Sonidos/Fui-La-Niña.mp3" autoplay></audio>
+    <section class="cuer-regis">
+        <h1>Registro</h1><br>
+        <div class="te-regis">
+            <input type="text" id="Dato1Mostrados" class="datitos"><br><br>
+        </div>
+        <div class="te-regis">
+            <input type="text" id="Dato2Mostrados" class="datitos"><br><br>
+        </div>
+        <div class="te-regis">
+            <input type="text" id="Dato3Mostrados" class="datitos"><br><br>
+        </div>
+        <div class="te-regis">
+            <input type="text" id="Dato4Mostrados" class="datitos"><br><br>
+        </div>
+    </section>
+    <script>
+        const recibido = localStorage.getItem('nombrecito');
+        document.getElementById('Dato1Mostrados').value = `${recibido}`;
+        const recibido1 = localStorage.getItem('apedillito');
+        document.getElementById('Dato2Mostrados').value = `${recibido1}`;
+        const recibido2 = localStorage.getItem('correito');
+        document.getElementById('Dato3Mostrados').value = `${recibido2}`;
+        const recibido3 = localStorage.getItem('numerito');
+        document.getElementById('Dato4Mostrados').value = `${recibido3}`;
+    </script>
+    <div class="vol-11">
+        <br><br>
+        <a href="Index.html"><b>Regresar</b></a>
+    </div>
+</body>
+</html>
